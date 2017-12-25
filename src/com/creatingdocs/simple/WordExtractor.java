@@ -2,6 +2,8 @@ package com.creatingdocs.simple;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +34,12 @@ public class WordExtractor {
 				                text = text.replace(placeholder, entry.getValue());
 				                r.setText(text, 0);
 				            }
+			            }
+			            
+			            if (text != null && text.contains("{{data}}")) {
+			            	SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+			                text = text.replace("{{data}}", dateFormat.format(new Date()));
+			                r.setText(text, 0);
 			            }
 			           
 			        }  

@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=2Z8P3sIGhbw
+
+https://stackoverflow.com/questions/22268898/replacing-a-text-in-apache-poi-xwpf
+https://www.tutorialspoint.com/apache_poi_word/apache_poi_word_quick_guide.htm
+http://javadevblog.com/sozdanie-dokumenta-word-v-formate-docx-s-pomoshh-yu-apache-poi.html

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<encouraging>
+	<person>
+		<dateOfOrder>12.12.2017</dateOfOrder>
+		<numberOfOrder>122-k</numberOfOrder>
+		<fullName>Иванова Ивана Ивановича</fullName>
+		<position>механик</position>
+		<money>5000</money>
+		<base>перевыполнение плана работ</base>
+	</person>
+	<person>
+		<dateOfOrder>15.12.2017</dateOfOrder>
+		<numberOfOrder>114-k</numberOfOrder>
+		<fullName>Петрова Михаила Сергеевича</fullName>
+		<position>инженер</position>
+		<money>2000</money>
+		<base>рождение ребенка</base>
+	</person>
+</encouraging>

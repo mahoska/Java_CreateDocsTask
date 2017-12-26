@@ -1,9 +1,11 @@
 package com.creatingdocs.simple;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,27 +25,22 @@ public class Main {
 
 	public static void main(String[] args)throws Exception {
 		
-	   ReaderXML data = new ReaderXML();
-	   
-	   ArrayList<Map> info =  data.reader("./data.xml");
-	   int i = 0;
-	   WordExtractor generator =  new WordExtractor();
-	   
-	   for(Map<String, String> object : info) {
-		   //System.out.println(object);
+		try {
+		   ReaderXML data = new ReaderXML();
+		   ArrayList<Map> info =  data.reader("./data.xml");
+		   WordExtractor generator =  new WordExtractor();
 		   
-		   generator.createDocsFromTemlate(
-				   "C:\\Users\\amakhovskaya\\eclipse-workspace\\CreatingDocs\\templates\\Bonus.docx",
-				   "C:\\Users\\amakhovskaya\\eclipse-workspace\\CreatingDocs\\result\\bonus"+(i++)+".docx",
-				   object
-		   );
-		   System.out.println("document create");
+		   for(Map<String, String> object : info) {
+			   //System.out.println(object);
+			   generator.setFileTemplateName("Bonus");
+			   generator.createDocsFromTemlate(object);
+			   System.out.println("document create");
+		   }
 		   
-
-	   }
-	   
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
 	  
-	  
-	   }
+	}
 
 }
